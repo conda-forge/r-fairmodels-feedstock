@@ -1,4 +1,4 @@
-{% set version = '1.2.1' %}
+{% set version = "1.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/fairmodels_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fairmodels/fairmodels_{{ version }}.tar.gz
-  sha256: 97c39e00fe05402bc65b03d05f14698ed8101266e837f3534dac09d8cb17b373
+  sha256: a02654265b7d4cd59fd206e6fc1279bdaa29f50019da80aafba918fe549945ba
 
 build:
   noarch: generic
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -41,13 +41,8 @@ test:
 about:
   home: https://fairmodels.drwhy.ai/
   license: GPL-3.0-only
-  summary: "Measure fairness metrics in one place for many models. Check how big is model's bias
-    towards different races, sex, nationalities etc. Use measures such as Statistical
-    Parity, Equal odds to detect the discrimination against unprivileged groups. Visualize
-    the bias using heatmap, radar plot, biplot, bar chart (and more!). There are various
-    pre-processing and post-processing bias mitigation algorithms implemented. Package
-    also supports calculating fairness metrics for regression models. Find more details
-    in (Wi\u015Bniewski, Biecek (2021)) <arXiv:2104.00507>."
+  summary: "Measure fairness metrics in one place for many models. Check how big is model's bias towards different races, sex, nationalities etc. Use measures such as Statistical Parity, Equal odds to detect the discrimination against unprivileged groups. Visualize the bias using heatmap, radar plot, biplot, bar chart (and
+    more!). There are various pre-processing and post-processing bias mitigation algorithms implemented. Package also supports calculating fairness metrics for regression models. Find more details in (Wiśniewski, Biecek (2021)) <arXiv:2104.00507>."
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
